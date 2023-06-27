@@ -19,28 +19,14 @@ task:
       memory: 20G
 
   Checks_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/checks.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico1704-RecoveryBuilds/PitchBlack-CI/pb/scripts/checks.sh)"
 
   Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/sync.sh)"
-
-  Build_Z3S_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_z3s.sh)"
-
-  Upload_Z3S_script:
-      - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_z3s.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico1704-RecoveryBuilds/PitchBlack-CI/pb/scripts/sync.sh)"
 
   Build_P3S_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_p3s.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico1704-RecoveryBuilds/PitchBlack-CI/pb/scripts/build_p3s.sh)"
 
   Upload_P3S_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_p3s.sh)"
-
-  Build_B0S_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_b0s.sh)"
-
-  Upload_B0S_script:
-      - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_b0s.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico1704-RecoveryBuilds/PitchBlack-CI/pb/scripts/upload_p3s.sh)"
