@@ -29,16 +29,9 @@ Branch="android-12.1"                                                           
 
 Device="p3s"                                                                                         #<--- Set Device Codename here
 OEM="samsung"                                                                                        #<--- Set Device Manufactor here
-DeviceTree="https://github.com/Nico170420/android_device_samsung_p3s.git"                            #<--- Put Device Tree Link here
-DTBranch="pbrp"                                                                                     #<--- Set the DT Branch Name here
-Device2="z3s"                                                                                         #<--- Set Device Codename here
-OEM2="samsung"                                                                                        #<--- Set Device Manufactor here
-DeviceTree2="https://github.com/Nico170420/android_device_samsung_z3s.git"                            #<--- Put Device Tree Link here
-DTBranch2="pbrp"
-Device3="b0s"                                                                                         #<--- Set Device Codename here
-OEM3="samsung"                                                                                        #<--- Set Device Manufactor here
-DeviceTree3="https://github.com/Nico170420/android_device_samsung_b0s.git"                            #<--- Put Device Tree Link here
-DTBranch3="pbrp"
+DeviceTree="https://github.com/Nico17042020/android_device_samsung_p3s-test.git"                            #<--- Put Device Tree Link here
+DTBranch="android-11"                                                                                     #<--- Set the DT Branch Name here
+
 
 # Initialize Repo Manifest (SHRP/TWRP/PBRP)
 repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
@@ -48,8 +41,6 @@ repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
 # Cloning the Device Tree
 git clone ${DeviceTree} -b ${DTBranch} device/${OEM}/${Device}
-git clone ${DeviceTree2} -b ${DTBranch2} device/${OEM2}/${Device2}
-git clone ${DeviceTree3} -b ${DTBranch3} device/${OEM3}/${Device3}
 
 # Exit
 exit 0
